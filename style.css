@@ -1,0 +1,998 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#faf7f2;
+color:#222;
+overflow-x:hidden;
+}
+
+.container{
+width:92%;
+max-width:1320px;
+margin:auto;
+}
+
+img{
+max-width:100%;
+display:block;
+text-decoration:none;
+}
+
+/*========================
+NAVBAR
+=========================*/
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+transition:.4s;
+}
+
+header.active{
+background:white;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+nav{
+display:flex;
+gap: 35px;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo img{
+height:65px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.menu a{
+font-weight:600;
+color:#333;
+font-size:18px;
+white-space: nowrap;
+text-decoration: none;
+}
+
+.menu a:hover{
+color:#8b5a2b;
+}
+
+.btn-shop{
+    padding: 0 15px;
+    font-size: 18px;
+    display:flex;
+    margin-top:10px;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    background:#4e3115;
+    color:white !important;
+    text-decoration:none !important;
+    width:200px;
+    height:54px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+    box-sizing: border-box;
+
+}
+.btn-shop:hover{
+background:#6e4319;
+}
+.hamburger{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/*========================
+HERO
+=========================*/
+
+.hero{
+padding-top:110px;
+height:839px;
+background:
+
+url("images/right.png") right center no-repeat,
+linear-gradient(90deg,#fffdf8,#f8f2e7);
+background-size:1500px,cover;
+
+}
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+align-items:center;
+gap:30px;
+min-height:780px;
+}
+
+.small-title{
+font-size:32px;
+font-style:italic;
+color:#9b6d35;
+font-family:Georgia,serif;
+margin-bottom:10px;
+
+}
+
+.big-title{
+font-size:76px;
+font-weight:800;
+line-height:1;
+color:#2f2115;
+}
+
+.big-title span{
+display:block;
+color:#b88238;
+}
+
+
+.icon-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin:35px 0;
+}
+
+.icon-item{
+display:flex;
+gap:12px;
+align-items:flex-start;
+}
+
+.icon-item i{
+font-size:28px;
+color:#a46b25;
+margin-top:5px;
+
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+margin-top:25px;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+padding:18px 34px;
+border-radius:14px;
+font-size:18px;
+font-weight:700;
+
+}
+
+.primary{
+background:#8b5a2b;
+color:white;
+}
+
+.primary:hover{
+background:#6d441a;
+transform:translateY(-3px);
+}
+
+.secondary{
+border:2px solid #8b5a2b;
+color:#8b5a2b;
+}
+
+.secondary:hover{
+background:#8b5a2b;
+color:white;
+}
+
+.hero-right{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    position:relative;
+   
+}
+
+.hero-right img{
+    width:650px;     /* sebelumnya mungkin 450-500px */
+    max-width:none;
+    position:relative;
+    left:-40px;        /* geser ke kanan */
+    bottom:-15px;     /* sedikit turun */
+    z-index:2;
+}
+
+/*========================
+INFO CARD
+=========================*/
+
+.info-card{
+position:absolute;
+right:-30px;
+top:75px;
+width:280px;
+background:#4e3115;
+color:white;
+padding:35px 10px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+gap:10px;
+}
+
+.info-card h3{
+    margin: 0 0 20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.info-card ul{
+    margin: 15px 0 0;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+
+}
+
+/*========================
+SECTION
+=========================*/
+
+section{
+padding:90px 0;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+font-weight:800;
+margin-bottom:5px;
+}
+
+.subtitle{
+text-align:center;
+color:#777;
+margin-bottom:55px;
+font-size:18px;
+}
+
+.product-image{
+    position:relative;
+    height:300px;
+    overflow:hidden;
+   
+}
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff4747;
+    color:white;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.product-content{
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.product-content h3{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:18px;
+    line-height:1.2; 
+} 
+
+.desc{
+    color:#555;
+    line-height:1.5;
+    margin-bottom:18px;
+    flex:1;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+
+.product-card{
+    display:flex;
+    flex-direction:column;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    position:relative;
+    height:100%;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.product-card img{
+height:320px;
+object-fit:cover;
+}
+
+
+.rating{
+    margin:8px 0 12px;
+    color:#f5b301;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.rating span{
+    color:#666;
+    font-size:14px;
+    /* font-weight:500; */
+    margin-left:6px;
+}
+.sold{
+    color:#974e24;;
+    font-size:15px;
+    font-weight:500;
+}
+.price{
+    font-size:20px;
+    font-weight:600;
+    color:#9c642c;
+    margin-bottom:20px;
+}
+
+.btn-product{
+display:inline-block;
+text-decoration:none  ;
+text-align:center;
+background:#6b441c;
+color:#fff;
+padding:14px;
+border-radius:10px;
+margin-top: 12px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-product:hover{
+background:#b57b3d;
+}
+
+/* ==========================
+WHY US
+========================== */
+
+.why{
+background:#fff;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-box{
+padding:35px;
+background:#faf7f2;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+}
+
+.why-box:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.why-box i{
+font-size:55px;
+color:#8b5a2b;
+margin-bottom:20px;
+}
+
+.why-box h3{
+margin-bottom:15px;
+}
+
+
+/* ==========================
+TESTIMONI
+========================== */
+
+.testimonial{
+background:#f8f3ea;
+}
+
+.testi-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.testi-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.testi-top{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+}
+
+
+
+.star{
+color:#ffb400;
+margin-bottom:15px;
+font-size:20px;
+}
+
+
+/* ==========================
+CTA
+========================== */
+
+.cta{
+
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index:2;
+}
+
+.cta::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:500px;
+    left:-30px;
+    top:-30px;
+
+    background:url("images/left1.png") no-repeat center;
+    background-size: cover;   /* ganti contain menjadi cover */
+    opacity:1;
+}
+
+.cta::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:600px;
+    right:-30px;
+    bottom:-30px;
+
+    background:url("images/right1.png") no-repeat center;
+    background-size: cover;   /* ganti contain menjadi cover */
+    opacity:1;
+}
+
+
+
+.cta .container{
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;   /* membuat container berada di tengah */
+}
+
+.cta h2 span{
+    color:#8b5a2b;
+}
+.cta h2{
+    position:relative;
+    z-index:2;
+    font-size:52px;
+    font-weight:700;
+    text-shadow:
+    0 0 30px rgba(255,255,255,.18);
+
+}
+
+.cta p{
+    margin-bottom:20px;   /* Perbesar jarak ke tombol */
+    font-size:22px;
+    line-height:1.6;
+}
+
+.gold-divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#eca71c;
+    font-size:18px;
+}
+
+.gold-divider::before,
+.gold-divider::after{
+    content:"";
+    width:330px;
+    height:2px;
+    background:#9e8146;
+   }
+
+.cta-btn{
+display:inline-block;
+margin-top: 10px;
+padding:15px 40px;
+background:#9e8146;
+color:#fff;
+font-weight:bold;
+border-radius:15px;
+transition:.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-4px);
+}
+
+/* ==========================
+FOOTER
+========================== */
+footer{
+background:
+url("images/footer.png") center center no-repeat,
+linear-gradient(90deg,#3b2412,#5b381c);
+background-size:
+1350px auto,
+cover;
+color:white;
+padding:80px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-title{
+font-size:28px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.footer-text{
+line-height:1.8;
+color:#ddd;
+}
+
+.footer-menu{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.footer-menu a{
+color:#ddd;
+transition:.3s;
+}
+
+.footer-menu a:hover{
+color:#fff;
+padding-left:5px;
+}
+
+.footer-contact p{
+margin-bottom:15px;
+color:#ddd;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.15);
+margin-top:40px;
+padding-top:25px;
+text-align:center;
+color:#ccc;
+font-size:14px;
+}
+
+/* WhatsApp Floating */
+
+.wa-floating{
+position:fixed;
+right:25px;
+bottom:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+z-index:99999;
+transition:.3s;
+}
+
+.wa-floating:hover{
+transform:scale(1.1);
+}
+/* 
+.hamburger{
+    display:none;
+} */
+
+/* Responsive untuk layar HP */
+
+@media(max-width:900px){
+
+    /* HERO LAYOUT HP */
+    nav{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    }
+    .hero{
+        background-size:cover;
+        background-position: center;
+        min-height:auto;
+        padding:50px 0;
+        height:1060px;
+    }
+
+    .hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+    }
+    
+    .hero-right{
+        display:flexbox;
+        flex-direction:column;
+        align-items:center;
+        margin-top: -20px;
+        
+      
+    }
+
+    .hero-right img{
+    width:75%;
+    max-width:260px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+    }
+    /* Hasil
+    FOTO
+
+    TEXT */
+
+
+    /* JUDUL */
+
+    .big-title{
+    font-size:42px;
+    line-height:1;
+    }
+
+    .big-title span{
+    display:block;
+    }
+    .small-title{
+    font-size:18px;
+    line-height: 1.1;
+    margin-top: 60px;
+    }
+
+    .desc{
+    font-size:15px;
+    line-height: 16px;
+    max-width: 340px;
+    padding: 0 10px;
+    margin: 20px auto;
+    }
+
+    /* TAHAP ICON LIST */
+
+    .icon-list{
+    grid-template-columns:repeat(1fr,1fr);
+    gap:15px;
+    margin: 30px 0;
+    }
+
+    .icon-item{
+    padding: 15px;    
+    text-align:left;
+    }
+
+    /* Hasil
+    🍃 Bahan Adem      ⭐ Motif Elegan
+
+    👕 Jahitan         🛡 Warna Awet */
+    
+    /* TAHAP TOMBOL */
+
+    .hero-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:12px;
+    }
+
+    .hero-btn{
+    width: 250px;
+    justify-content: center;
+    }
+    
+    /* Hasil
+    [Lihat di Shopee]
+    [Chat WhatsApp] */
+
+    /* FOTO */
+    .hero-right img{
+        position: relative;
+        left: -50px;
+    width:85%;
+    max-width:300px;
+    margin-left: -50px;
+    margin-top: -10px;
+    }
+
+    /* INFO CARD */
+
+    .info-card{
+        position: relative;
+        margin-top: -300px;
+        margin-left: 40px;
+        width:280px;
+        text-align: left;
+        padding:25px 20px 25px 25px;
+        /* padding: 15px 0px 15px 120px; */
+        height: auto;
+    }
+    .info-card h3{
+        padding-left: -25px;
+        font-size: 20px;
+        
+        
+        
+        
+    }
+    .info-card ul{
+        margin: 15px 0 0;
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+        
+        
+    }
+        
+    /* Hasil 
+    📷 FOTO
+┌─────────────────────┐
+│ ⭐ Fatonah Collection│
+│ 👑 Wanita Karier    │
+│ ⭐ Ribuan Pembeli   │
+└─────────────────────┘
+*/
+
+/* MENU */
+
+/* ===== MOBILE MENU ===== */
+
+.hamburger{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.menu{
+
+    display:none;
+
+    flex-direction:column;
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    padding:20px 0;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    z-index:1000;
+
+    }
+
+    .menu.active{
+
+     display:flex;
+
+    }
+
+    .menu a{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+    }
+
+    .btn-shop{
+
+    width:220px;
+
+    margin:20px auto;
+
+    }
+
+
+.logo img{
+    width:160px;
+    height:auto;
+
+}
+/* ==========================
+   PRODUCT MOBILE
+========================== */
+
+.product-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.product-card{
+    width:100%;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+
+.product-image{
+    height:350px;
+}
+
+.product-card img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+}
+
+.badge{
+    top:12px;
+    left:12px;
+    padding:6px 12px;
+    font-size:11px;
+    border-radius:20px;
+}
+
+.product-content{
+    display:flex;
+    flex-direction:column;
+    padding:18px;
+}
+
+.product-content h3{
+    font-size:22px;
+    line-height:1.3;
+    margin-bottom:10px;
+    text-align:left;
+    
+}
+
+.product-content .desc{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:15px;
+    color:#666;
+    margin-top:10px;
+    
+    
+}
+
+.price{
+    font-size:24px;
+    font-weight:700;
+    color:#9b6d35;
+    margin-bottom:18px;
+     
+}
+
+.rating{
+    font-size:16px;
+    margin:6px 0 10px;
+}
+
+.rating span{
+    font-size:13px;
+}
+.btn-product{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    height:50px;
+    font-size:16px;
+    border-radius:12px;
+    
+}
+
+footer{
+    padding:55px 0 30px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+    text-align:center;
+}
+
+.footer-title{
+    font-size:24px;
+}
+.footer-text{
+    line-height:1.5;
+    font-size:15px;
+}
+.footer-menu{
+    gap:16px;
+}
+
+/* .footer-contact{
+    line-height:1;
+    font-size:15px;
+} */
+.footer-contact p{
+    margin-bottom:18px;
+    line-height:0.4;
+}
+
+}
+
